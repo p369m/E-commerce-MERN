@@ -2,7 +2,7 @@ import React from 'react'
 import './ExploreMenu.css'
 import { frontend_assets, menu_list } from '../../assets/frontend_assets/assets'
 
-const ExploreMenu = () => {
+const ExploreMenu = ({catagory,setCatagory}) => {
   return (
     <div className='explore-menu' id='explore-menu'>
       <h1>Explore our menu</h1>
@@ -10,13 +10,14 @@ const ExploreMenu = () => {
       <div className="explore-menu-list">
         {menu_list.map((item,i)=>{
             return (
-                <div key={i} className="explore-menu-item">
-                    <img src={item.menu_image} alt="" />
+                <div onClick={()=>setCatagory(prev=>prev===item.menu_name?"all":item.menu_name)} key={i} className="explore-menu-item">
+                    <img className={catagory===item.menu_name?"active":""} src={item.menu_image} alt="" />
                     <p>{item.menu_name}</p>
                 </div>
             )
         })}
       </div>
+      <hr />
     </div>
   )
 }
