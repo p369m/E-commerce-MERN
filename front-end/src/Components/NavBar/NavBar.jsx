@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './NavBar.css'
 import { frontend_assets } from '../../assets/frontend_assets/assets'
 
-const NavBar = () => {
+const NavBar = ({setShowLogin}) => {
     const [menu,setMenu]=useState("home");
 
   return (
@@ -20,7 +20,7 @@ const NavBar = () => {
                 <img src={frontend_assets.basket_icon} alt="" />
                 <div className="dot"></div>
             </div>
-            <button>Sign In</button>
+            <button onClick={()=>setShowLogin(true)}>Sign In</button>
         </div>
     </div>
   )
