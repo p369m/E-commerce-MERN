@@ -1,0 +1,34 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: max(80%, 500px);
+    margin: auto;
+    padding: 3px;
+}
+.main-left{
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.multi-fields{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+   
+}
+.title{
+    font-size: 25px;
+
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.main-left input {
+   padding: 5px;
+   border: 1px solid tomato;
+   outline-color: tomato;
+}
+.main-right {
+    width: 30%;
+}
